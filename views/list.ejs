@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="box" id="heading">
+        <h1>
+            <%= kindOfDay %>
+        </h1>
+    </div>
+
+    <div class="box">
+        <% for(let i=0; i<newItems.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= newItems[i] %>
+                </p>
+            </div>
+            <% } %>
+
+                <form action="/" method="POST" class="item">
+
+                    <input type="text" name="toDoItem" placeholder="New Item" autocomplete="off" required>
+                    <button type="submit" name="button">+</button>
+
+
+                </form>
+    </div>
+
+
+
+
+
+</body>
+<footer>
+    Copyright 2021 Het Bhatt
+</footer>
+
+</html>
